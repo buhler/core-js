@@ -412,9 +412,7 @@ const base = {
   'sonarjs/prefer-while': 'error',
 };
 
-const es3 = {
-  // disallow trailing commas in multiline object literals
-  'comma-dangle': ['error', 'never'],
+const es5 = {
   // disallow function or variable declarations in nested blocks
   'no-inner-declarations': 'error',
   // require let or const instead of var
@@ -568,9 +566,9 @@ module.exports = {
         'tests/compat/**',
       ],
       parserOptions: {
-        ecmaVersion: 3,
+        ecmaVersion: 5,
       },
-      rules: es3,
+      rules: es5,
     },
     {
       files: [
